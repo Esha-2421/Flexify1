@@ -1,0 +1,382 @@
+.fb-banner {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(90deg,#5F009A  0%, #6b00ff 50%,  #EED9FE 100%);
+  color: #fff;
+  padding: 20px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.fb-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.fb-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* ensures wrapping on small devices */
+  gap: 16px;
+}
+
+/* Left side */
+.fb-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: right;
+  flex: 1;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+}
+
+.logo-fb {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.logo-plus {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #b3e6ff;
+}
+
+.free-pill {
+  margin-top: 8px;
+  background-color: #39d04a;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Right side */
+.fb-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.countdown-wrap {
+  display: flex;
+  gap: 12px;
+}
+
+.count-box {
+  background-color: #fff;
+  color: #1e293b;
+  width: 70px;
+  height: 80px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 700;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.count-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.count-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* caret icon in top right */
+.fb-banner::after {
+  content: "▲";
+  position: absolute;
+  right: 20px;
+  top: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ✅ RESPONSIVE FIXES */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .logo-fb,
+  .logo-plus {
+    font-size: 2.5rem;
+  }
+
+  .count-box {
+    width: 60px;
+    height: 70px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .fb-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .fb-left {
+    margin-bottom: 12px;
+  }
+
+  .logo-fb,
+  .logo-plus {
+    font-size: 2rem;
+  }
+
+  .free-pill {
+    font-size: 0.8rem;
+  }
+
+  .count-box {
+    width: 55px;
+    height: 60px;
+  }
+
+  .count-number {
+    font-size: 1.4rem;
+  }
+}
+.workout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d8dbe3; /* light gray background */
+  border-bottom: 1px solid #c5c8d3;
+  flex-wrap: wrap; /* for smaller screens */
+}
+
+.workout-header-left h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin: 0;
+  padding-bottom:10px;
+  text-align: left;
+}
+.workout-header-left{
+  padding: 12px 20px;
+}
+/* Toggle Buttons */
+.toggle-container {
+  display: flex;
+  background: #ffffff;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px #ccc;
+}
+
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn .icon {
+  font-size: 1rem;
+}
+
+.toggle-btn.active {
+  background-color: #3a9ad9; /* blue highlight like screenshot */
+  color: #fff;
+}
+
+.toggle-btn:not(.active):hover {
+  background-color: #f0f0f0;
+}
+.workout-header-left{
+    padding-right:20px;
+    border-right: solid 1px white;
+    padding-left:40px;
+}
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .workout-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .toggle-container {
+    align-self: flex-start;
+  }
+}
+.workout-container {
+  display: flex;
+  background-color: #d8dbe3;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+/* ==== SIDEBAR ==== */
+.sidebar {
+  width:337px;
+  background: #e5e7ee;
+  padding: 10px 0;
+  border-right: 1px solid #ccc;
+  height: 100vh;
+}
+
+.sidebar-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: #1f1f1f;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 1px solid #d1d3da;
+  transition: all 0.2s ease;
+}
+
+.sidebar-item:hover {
+  background: #f2f4f9;
+}
+
+.sidebar-item.expand {
+  background: #cfd2dd;
+  font-weight: 700;
+}
+
+.sidebar-item .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-item .icon {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* ==== MAIN CONTENT ==== */
+.workout-main {
+  flex: 1;
+  background: #d2d4df;
+  padding: 20px 30px;
+  overflow: hidden;
+}
+
+.workout-top {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.workout-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+}
+
+.workout-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.workout-scroll::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 5px;
+}
+
+.workout-card {
+  min-width: 300px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.workout-card:hover {
+  transform: translateY(-5px);
+}
+
+.workout-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.workout-info {
+  padding: 10px 15px;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.plus {
+  background: #3796d2;
+  color: white;
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.free {
+  background: #2ecc40;
+  color: white;
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.workout-info h4 {
+  margin: 5px 0;
+  color: #111;
+  font-size: 1rem;
+}
+
+.workout-info p {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 0 0 8px;
+}
+
+.time {
+  font-size: 0.85rem;
+  color: #3796d2;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .workout-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+}

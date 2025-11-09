@@ -1,0 +1,95 @@
+.help-section {
+  width: 100%;
+  background: #fff;
+  padding-top:80px;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom:30px;
+}
+
+.help-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.help-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(400px * 8);
+  animation: scroll 25s linear infinite;
+}
+
+.help-card {
+  width: 400px;
+  margin: 0 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.4s ease;
+}
+
+.help-card:hover {
+  transform: scale(1.05);
+}
+
+.help-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 5s ease;
+}
+
+.help-card:hover .help-image {
+  transform: scale(1.1);
+}
+
+.help-content {
+  padding: 20px;
+}
+
+.help-content h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.help-content p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Continuous left-to-right scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .help-card {
+    width: 260px;
+    margin: 0 10px;
+  }
+
+  .help-image {
+    height: 180px;
+  }
+
+  .help-heading {
+    font-size: 2rem;
+  }
+}

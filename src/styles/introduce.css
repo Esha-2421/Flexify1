@@ -1,0 +1,99 @@
+.hart-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border-radius: 40px;
+  padding: 60px 20px;
+  color: #fff;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 80px auto;
+}
+
+@media (min-width: 900px) {
+  .hart-section {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 80px 100px;
+  }
+}
+
+/* Left side image */
+.hart-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hart-phone {
+  width: 90%;
+  max-width: 380px;
+  border-radius: 30px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Right side text */
+.hart-right {
+  flex: 1;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .hart-right {
+    text-align: left;
+  }
+}
+
+.hart-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #9B21E7; /* soft green */
+}
+
+.hart-subtitle {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.hart-description {
+  font-size: 1.05rem;
+  color: #aaa;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 900px) {
+  .hart-description {
+    margin-left: 0;
+  }
+}
+
+/* Button */
+.hart-btn {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hart-btn:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.03);
+}
